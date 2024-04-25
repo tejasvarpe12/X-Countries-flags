@@ -24,6 +24,8 @@ function App() {
   }, []);
 
   return (
+    <div className='headline'>
+      <h1>All countries Flags ~ </h1>
     <div className="country-list">
       {error && <p>Error: {error}</p>}
       {countries.map(country => (
@@ -32,9 +34,10 @@ function App() {
             src={country.flags.png}
             alt={`Flag of ${country.name.common}`}
           />
-          <h2>{country.name.common}</h2>
+          <h2 className='h2'>{country.name.common}</h2>
         </div>
       ))}
+    </div>
     </div>
   );
 }
